@@ -27,8 +27,8 @@ def vdc(k, base = 2):
 
 
 if __name__ == '__main__':
-*   L = [vdc(k, 2) for k in range(1, 11)]
-    print(L)
+*   for k in range(1, 11):
+        print("{}", vdc(k, 2))
 ```
 
 ---
@@ -36,8 +36,8 @@ if __name__ == '__main__':
 ## C++ equivalence
 
 ```cpp
-double vdc(unsigned k, unsigned base=2) {
-    auto vdc = 0., demon = 1.;
+auto vdc(unsigned k, unsigned base=2) -> {
+    auto vdc = 0.0, denom = 1.0;
     while (k != 0) {
         denom *= base;
         const auto rem = k % base;
@@ -46,11 +46,34 @@ double vdc(unsigned k, unsigned base=2) {
     }
     return vdc;
 }
+
 int main() {
-    std::vector<double> L;
-    for (auto i=1U; i != 11; ++i) 
-        L.emplace_back(vdc(i, 2));
-    fmt::print("{}\n", L);
+    for (auto k=1U; k != 11U; ++k) 
+       fmt::print("{}\n", vdc(k, 2));
+}
+```
+
+---
+
+## Rust equivalence
+
+```rust
+fn vdc(mut k: u32, base: u32) -> f64 {
+    let mut vdc = 0.0;
+    let mut denom = 1.0;
+    while k != 0 {
+        denom *= base as f64;
+        let rem = k % base;
+        k /= base;
+        vdc += (rem as f64) / denom;
+    }
+    vdc  // <- note!
+}
+
+fn main() {
+    for k in 1..11 { 
+        println!("{}", vdc(k, 2));
+    }
 }
 ```
 

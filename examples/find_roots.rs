@@ -7,7 +7,7 @@ fn find_roots(b: f64, c: f64) -> Option<(f64, f64)> {
     let sqrd = d.sqrt();
     let x1 = -h + (if h < 0.0 { sqrd } else { -sqrd });
     let x2 = c / x1;
-    return Some((x1, x2));
+    Some((x1, x2))
 }
 
 fn main() {
@@ -17,7 +17,7 @@ fn main() {
 
     let ans = find_roots(b/a, c/a);
     if let Some(value) = ans {
-        println!("The answers are {} and {}", value.0, value.1);
+        println!("The answers are {:?}", value);
     }
     else {
         println!("There is no real solution");

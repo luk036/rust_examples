@@ -6,7 +6,7 @@ class: typo, typo-selection
 count: false
 class: nord-dark, center, middle
 
-# Lecture 1: Hello {fmt}
+# Lecture 1: Hello world!
 
 ---
 
@@ -105,37 +105,67 @@ int main() {
 }
 ```
 
+How about in Rust?
+
 ---
 
-## Hello container (Python)
+## Hello {fmt} 
 
-```python
-# file: hello.py
-a = 12 + 4
-print('The answer is {}'.format(a))
+```rust
+// file: hello.rs
+// Compile with:
+// $ rustc hello.rs
 
-L = [2, 3, 5, 7, 11, 'hello']
-print('The answer is {}'.format(L))
+fn main() {
+    let a = 12 + 4; 
+    println!("答案是 {}.", a);
+
+    let b = (0.4 as f64).sin();
+    println!("答案是 {}.", b);
+}
 ```
 
 ---
 
-## Hello {fmt} (C++)
+## Hello array (Python)
+
+```python
+# file: hello.py
+
+arr = [2, 3, 5, 7, 11, 'hello']
+print('The answer is {}'.format(arr))
+```
+
+---
+
+## Hello array (C++)
 
 ```cpp
 // file: hello.cpp
 // Compile with:
 // $ g++ -std=c++17 hello.cpp -lfmt
 
-#include <vector>
+#include <array>
 *#include <fmt/ranges.h>
 
 int main() {
-    auto a = 12 + 4;
-    fmt::print("The ans is {}.\n", a);
+    auto arr = std::array{2, 3, 5}; // c++17
+    fmt::print("The ans is {}.\n", arr);
+}
+```
 
-    auto L = std::vector{2, 3, 5}; // c++17
-    fmt::print("The ans is {}.\n", L);
+---
+
+## Hello array (Rust)
+
+```rust
+// file: hello.rs
+// Compile with:
+// $ rustc hello.rs
+
+fn main() {
+    let arr = [2, 3, 5];
+    println!("The ans is {:?}.", arr);
 }
 ```
 
@@ -154,6 +184,21 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
+
+---
+
+## Tuple in Rust
+
+```rust
+fn main() {
+    let tup = ("a", "u", "e", 7, 3.4);
+    println!("{:?}", tup)
+ 
+    let arr = [2, 3, 5, 7];
+    for (i, e) in arr.iter().enumerate():
+        println!("{}: {}", i, e)
+}
 ```
 
 ---
@@ -190,6 +235,7 @@ int main() {
   - pkg install python
   - pkg install clang
   - pkg install fmt
+  - pkg install rust
 
 ---
 
@@ -198,17 +244,18 @@ int main() {
 - Almost Always Auto (AAA)
 - Modern C++ is faster, safer, and easier to use.
 - Modern C++ is more python-like
+- Modern C++ is more Rust-like
 
 ---
 
 ## Coming up 🔜
 
 - Type checking in python
-- `None` vs. `std::optional`
+- `None` vs. `std::optional<T>` vs. `Option<T>`
 - Essential containers
-  - list vs. std::vector
-  - set vs. std::unordered\_set
-  - dict vs. std::unordered\_map
+  - list vs. `std::vector<T>` vs. `Vec<T>`
+  - dict vs. `std::unordered_map<T>` vs. `HashMap<T>`
+  - set  vs. `std::unordered_set<T>` vs. `HashSet<T>` 
 - range base for-loop vs. range-v3
   - zip, enumerate
 - numpy vs. xtensor
