@@ -28,7 +28,7 @@ mod lds {
             Vdcorput { count: 0, base: 2 }
         }
 
-        pub fn next(&mut self) -> f64 {
+        pub fn pop(&mut self) -> f64 {
             self.count = self.count + 1;
             return vdc(self.count, self.base);
         }
@@ -53,7 +53,7 @@ mod lds {
             }
         }
 
-        pub fn next(&mut self) -> [f64; 2] { [self.vdc0.next(), self.vdc1.next()] }
+        pub fn pop(&mut self) -> [f64; 2] { [self.vdc0.pop(), self.vdc1.pop()] }
 
         /**
          * @brief
@@ -81,9 +81,9 @@ mod lds {
             }
         }
 
-        pub fn next(&mut self) -> [f64; 2] {
+        pub fn pop(&mut self) -> [f64; 2] {
             // let two_pi = 2.0 * (-1.0 as f64).acos(); // ???
-            let theta = self.vdc.next() * TWO_PI;  // map to [0, 2*pi];
+            let theta = self.vdc.pop() * TWO_PI;  // map to [0, 2*pi];
             [theta.sin(), theta.cos()]
         }
 
@@ -107,10 +107,10 @@ mod lds {
             }
         }
 
-        pub fn next(&mut self) -> [f64; 3] {
-            let cosphi = 2.0 * self.vdc.next() - 1.0;  // map to [-1, 1];
+        pub fn pop(&mut self) -> [f64; 3] {
+            let cosphi = 2.0 * self.vdc.pop() - 1.0;  // map to [-1, 1];
             let sinphi = (1.0 - cosphi * cosphi).sqrt();
-            let [c, s] = self.cirgen.next();
+            let [c, s] = self.cirgen.pop();
             [sinphi * c, sinphi * s, cosphi]
         }
 
@@ -144,10 +144,10 @@ mod lds {
             }
         }
 
-        pub fn next(&mut self) -> [f64; 4] {
-            let phi = self.vdc0.next() * TWO_PI;  // map to [0, 2*pi];
-            let psy = self.vdc1.next() * TWO_PI;  // map to [0, 2*pi];
-            let vd = self.vdc2.next();
+        pub fn pop(&mut self) -> [f64; 4] {
+            let phi = self.vdc0.pop() * TWO_PI;  // map to [0, 2*pi];
+            let psy = self.vdc1.pop() * TWO_PI;  // map to [0, 2*pi];
+            let vd = self.vdc2.pop();
             let cos_eta = vd.sqrt();
             let sin_eta = (1.0 - vd).sqrt();
             [cos_eta * psy.cos(), cos_eta * psy.sin(), sin_eta * (phi + psy).cos(),
@@ -169,27 +169,27 @@ fn main() {
 
     let mut vgen = lds::Vdcorput::new_default();
     for _i in 0 .. 10 {
-        println!("{}", vgen.next());
+        println!("{}", vgen.pop());
     }
 
     let mut cgen = lds::Circle::new(2);
     for _i in 0 .. 10 {
-        println!("{:?}", cgen.next());
+        println!("{:?}", cgen.pop());
     }
 
     let mut hgen = lds::Halton::new(&base);
     for _i in 0 .. 10 {
-        println!("{:?}", hgen.next());
+        println!("{:?}", hgen.pop());
     }
 
     let mut sgen = lds::Sphere::new([2, 3]);
     for _i in 0 .. 10 {
-        println!("{:?}", sgen.next());
+        println!("{:?}", sgen.pop());
     }
 
     let mut s3fgen = lds::Sphere3Hopf::new([2, 3, 5]);
     for _i in 0 .. 10 {
-        println!("{:?}", s3fgen.next());
+        println!("{:?}", s3fgen.pop());
     }
 }
 
