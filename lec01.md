@@ -20,34 +20,33 @@ class: nord-dark, center, middle
 from math import sin
 
 a = 12 + 4
-print('The ans is {}.'.format(a))
+print('结果是 {}.'.format(a))
 
 b = sin(0.4)
-print('The ans is {}.'.format(b))
+print('结果是 {}.'.format(b))
 ```
 
-How about in C++?
+How about in C?
 
 ---
 
 ## Hello printf
 
-```cpp
-// file: hello2.cpp
+```c
+// file: hello.c
 // Compile with:
-// $ g++ hello2.cpp -o hello2
+// $ gcc hello.c -o hello
 
 #include <stdio.h>  // for printf
-#include <cmath>    // for std::sin()
+#include <math.h>   // for sin()
 
 int main() {
-    auto a = 12 + 4; // C++11
+    int a = 12 + 4;
     printf("The ans is %d.\n", a); // %d for int
 
-    auto b = std::sin(0.4);
+    double b = sin(0.4);
     printf("The ans is %f.\n", b); // %f for double
 }
-
 ```
 
 ---
@@ -109,7 +108,7 @@ How about in Rust?
 
 ---
 
-## Hello {fmt} 
+## Hello `println!()`
 
 ```rust
 // file: hello.rs
@@ -146,7 +145,7 @@ print('The answer is {}'.format(arr))
 // $ g++ -std=c++17 hello.cpp -lfmt
 
 #include <array>
-*#include <fmt/ranges.h>
+#include <fmt/ranges.h>  // note!!!
 
 int main() {
     auto arr = std::array{2, 3, 5}; // c++17
@@ -174,16 +173,12 @@ fn main() {
 ## Tuple in Python
 
 ```python
-def main():
-    T = ("a", "u", "e", 7, 3.4)
-    print(T)
+T = ("a", "u", "e", 7, 3.4)
+print(T)
  
-    for i, e in enumerate(T):
-        print("{}: {}, ".format(i, e))
+for i, e in enumerate(T):
+    print("{}: {}, ".format(i, e))
 
-
-if __name__ == '__main__':
-    main()
 ```
 
 ---
@@ -241,8 +236,6 @@ int main() {
 
 ## Conclusion
 
-- Almost Always Auto (AAA)
-- Modern C++ is faster, safer, and easier to use.
 - Modern C++ is more python-like
 - Modern C++ is more Rust-like
 
@@ -258,7 +251,7 @@ int main() {
   - set  vs. `std::unordered_set<T>` vs. `HashSet<T>` 
 - range base for-loop vs. range-v3
   - zip, enumerate
-- numpy vs. xtensor
+- numpy vs. xtensor vs. ndarray
 - pytest vs. doctest
 - and more...
 
