@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>luk036.github.io</title>
+    <title>From Python To Modern C++</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width"
     />
-    <link rel="stylesheet" type="text/css" href="./css/pure-min.css" />
-    <link rel="stylesheet" type="text/css" href="./css/spaces.css" />
-    <link rel="stylesheet" type="text/css" href="./css/typo.css" />
-    <link rel="stylesheet" type="text/css" href="./css/nord-dark.css" />
-    <link rel="stylesheet" type="text/css" href="./css/nord-light.css" />
-    <link rel="stylesheet" type="text/css" href="./css/font-nord.css" />
-    <link rel="stylesheet" type="text/css" href="./css/bg-nord.css" />
-    <link rel="stylesheet" type="text/css" href="./fonts/remixicon.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/typo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nord-dark.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nord-light.css" />
+    <link rel="stylesheet" type="text/css" href="../css/font-nord.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bg-nord.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <script>
       function create() {
-        return remark.create({
-          sourceUrl: "README.md",
+        var options = {
+          sourceUrl: 'README.md',
           ratio: "16:9", // 窗口比例
           // 可选：arta, ascetic, dark, default, far, github, googlecode, idea,
           // ir-black, magula, monokai, rainbow, solarized-dark, solarized-light,
@@ -34,12 +31,13 @@
             touch: true, // （如果是触摸屏）是否允许点击屏幕左边或右边前后翻页
             click: false, // 是否允许鼠标点击屏幕左边或右边前后翻页
           },
-        });
+        };
+
+        return remark.create(options);
       }
     </script>
   </head>
   <body onload="slideshow = create()">
-    <script src="js/remark.min.js"></script>
-    <!-- <script src="js/quasar.umd.min.js"></script> -->
+    <script src="../js/remark.min.js"></script>
   </body>
 </html>
