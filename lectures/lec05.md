@@ -46,6 +46,23 @@ auto topmost = *std::max_element(first, last, up);
 
 ---
 
+## min()/max() in Rust 
+
+```cpp
+let coords = vec![
+    (-2, 2), (0, -1), (-5, 1), (-2, 4), (0, -4), (-4, 3), (-6, -2),
+    (5, 1), (2, 2), (3, -3), (-3, -3), (3, 3), (-3, -4), (1, 4)
+];
+let mut pointset = vec![];
+for (x, y) in coords.iter() {
+    pointset.push(Point::<i32>::new(*x, *y));
+}
+let topmost = pointset.iter().max_by_key(|&a| (a.y_, a.x_)).unwrap();
+let botmost = pointset.iter().min_by_key(|&a| (a.y_, a.x_)).unwrap();
+```
+
+---
+
 ## partition() in python:
 
 ```python
@@ -73,6 +90,15 @@ auto middle = std::partition(first, last, right)
 
 ---
 
+## partition() in rust:
+
+```rust
+let (mut lst1, mut lst2): (Vec<Point<T>>, Vec<Point<T>>) = 
+    pointset.iter().partition(|&pt| (pt.x_ >= botmost.x_));
+```
+
+---
+
 ## Sorting in Python
 
 ```python
@@ -93,6 +119,16 @@ auto down = [](const auto& a, const auto& b) {
 };
 std::sort(first, middle, up);
 std::sort(middle, last, down);
+```
+
+---
+
+## Sorting in rust
+
+```rust
+lst1.sort_by_key(|&a| (a.y_, a.x_));
+lst2.sort_by_key(|&a| (a.y_, a.x_));
+lst2.reverse();
 ```
 
 ---
@@ -133,84 +169,29 @@ inline void create_ymono_polygon(FwIter&& first, FwIter&& last) {
 
 ---
 
-![img](ymono_polygon.svg)
+# Rust
 
----
-
-## Unit Testing (Python)
-
-```python
-*from pytest import approx
-...
-def test_euclid():
-    a1 = pg_point([3., -5., 2.])
-    a2 = pg_point([6., 2., 2.])
-    a3 = pg_point([5., -4., 3.])
-    triangle = [a1, a2, a3]
-    trilateral = tri_dual(triangle)
-    l1, l2, l3 = trilateral
-    t1, t2, t3 = tri_altitude(triangle)
-*   assert spread(t1, l1) == approx(1, abs=0.01)
-```
-
----
-
-## Unit Testing (C++)
-
-```cpp
-*#include <doctest.h>
-...
-TEST_CASE("Euclid plane (floating point)") {
-    auto a1 = pg_point {1., 3., 1.};
-    auto a2 = pg_point {4., 2., 1.};
-    auto a3 = pg_point {4., -3., 1.};
-    auto triangle = std::tuple {a1, a2, a3};
-    auto trilateral = tri_dual(triangle);
-    const auto& [l1, l2, l3] = trilateral;
-    auto [t1, t2, t3] = tri_altitude(triangle);
-*   CHECK(spread(t1, l1) == doctest::Approx(1).epsilon(0.01));
+```rust
+impl<T: Clone + Num + Ord + Copy> Polygon<T> {
+    pub fn create_ymono_polygon(pointset: &[Point<T>]) -> Vec<Point<T>> {
+        let max_pt = pointset.iter().max_by_key(|&a| (a.y_, a.x_)).unwrap();
+        let min_pt = pointset.iter().min_by_key(|&a| (a.y_, a.x_)).unwrap();
+        let d = max_pt - min_pt;
+        let (mut lst1, mut lst2): (Vec<Point<T>>, Vec<Point<T>>) = pointset
+            .iter()
+            .partition(|&a| d.cross(&(a - min_pt)) <= Zero::zero());
+        lst1.sort_by_key(|&a| (a.y_, a.x_));
+        lst2.sort_by_key(|&a| (a.y_, a.x_));
+        lst2.reverse();
+        lst1.append(&mut lst2);
+        lst1
+    }
 }
 ```
 
 ---
 
-## Environment Setup 🔧
-
-- Lubuntu 20.04 LTS:
-    - pip install pytest pytest-cov
-    - sudo apt install libboost-dev libfmt-dev
-    - sudo apt install cmake ninja git gh
-- Android termux:
-    - pip install pytest pytest-cov
-    - pkg install boost fmt
-    - pkg install cmake ninja git gh
-
----
-
-## Setup (Python) 🔧
-
-```bash
-$ gh repo clone luk036/physdespy
-$ cd physdespy
-$ pip install -r requirements.txt
-$ python setup.py develop
-$ python setup.py test
-```
-
----
-
-## Setup (C++) 🔧
-
-```bash
-$ gh repo clone luk036/physdes
-$ cd physdes/external
-$ git submodule update --init # for doctest
-$ cd ..
-$ mkdir build; cd build
-$ cmake .. -DCMAKE_BUILD_TYPE=Release
-$ cmake --build .
-$ ctest
-```
+![img](ymono_polygon.svg)
 
 ---
 
