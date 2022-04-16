@@ -1,9 +1,9 @@
 ---
-title: From Python to C++
+title: From Python 🐍 to C++
 aurthor: Wai-Shing Luk
 ...
 
-## Hello world (Python)
+## Hello world (Python 🐍)
 
 ```python
 # hello.py
@@ -58,7 +58,7 @@ $ ./a.out
 
 ---
 
-## Hello world (Python)
+## Hello world (Python 🐍)
 
 ```python
 # hello.py

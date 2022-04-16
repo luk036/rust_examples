@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Python:
+## Python 🐍:
 
 ```python
 def min_vertex_cover(G, cover, weight):
@@ -67,7 +67,7 @@ auto min_vertex_cover(const Graph& G, const C1& weight, C2& cover) {
 
 ---
 
-## Setup (Python) 🔧
+## Setup (Python 🐍) 🔧
 
 ```bash
 $ gh repo clone luk036/primal-dual-approx-py

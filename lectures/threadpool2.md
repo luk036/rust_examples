@@ -1,7 +1,7 @@
 
 ---
 
-## Python code
+## Python 🐍 code
 
 ```python
 def aberth(pa: List, zs: List, options: Options = Options()):
@@ -28,7 +28,7 @@ def aberth(pa: List, zs: List, options: Options = Options()):
 
 ---
 
-## Rust code
+## Rust 🦀 code
 
 ```rust
 pub fn aberth_th(pa: &[f64], zs: &mut Vec<Complex<f64>>, options: &Options) -> (usize, bool) {

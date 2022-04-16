@@ -266,7 +266,7 @@ int main()
 ## Conclusion
 
 - Template, overloading and inheritance reduce code complexity
-- Python cannot write generic code as C++
+- Python 🐍 cannot write generic code as C++
     - Built-in types (int, float, bool) are different from
       container types (list, dict and all class object) 
     - No operator/function overloading
@@ -275,7 +275,7 @@ int main()
 
 ## Source code
 
-Python:
+Python 🐍:
 
 $ wget https://github.com/luk036/physdespy/blob/master/src/physdespy/recti.py
 

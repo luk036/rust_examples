@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Hello Python
+## Hello Python 🐍
 
 ```python
 # file: hello.py
@@ -104,7 +104,7 @@ int main() {
 }
 ```
 
-How about in Rust?
+How about in Rust 🦀?
 
 ---
 
@@ -126,7 +126,7 @@ fn main() {
 
 ---
 
-## Hello array (Python)
+## Hello array (Python 🐍)
 
 ```python
 # file: hello.py
@@ -155,7 +155,7 @@ int main() {
 
 ---
 
-## Hello array (Rust)
+## Hello array (Rust 🦀)
 
 ```rust
 // file: hello.rs
@@ -170,7 +170,7 @@ fn main() {
 
 ---
 
-## Tuple in Python
+## Tuple in Python 🐍
 
 ```python
 T = ("a", "u", "e", 7, 3.4)
@@ -183,7 +183,7 @@ for i, e in enumerate(T):
 
 ---
 
-## Tuple in Rust
+## Tuple in Rust 🦀
 
 ```rust
 fn main() {
@@ -237,7 +237,7 @@ int main() {
 ## Conclusion
 
 - Modern C++ is more python-like
-- Modern C++ is more Rust-like
+- Modern C++ is more Rust 🦀-like
 
 ---
 

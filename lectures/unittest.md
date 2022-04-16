@@ -11,7 +11,7 @@ class: nord-dark, center, middle
 ---
 
 
-## Unit Testing (Python)
+## Unit Testing (Python 🐍)
 
 ```python
 *from pytest import approx
@@ -61,7 +61,7 @@ TEST_CASE("Euclid plane (floating point)") {
 
 ---
 
-## Setup (Python) 🔧
+## Setup (Python 🐍) 🔧
 
 ```bash
 $ gh repo clone luk036/physdespy

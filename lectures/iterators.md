@@ -54,7 +54,7 @@ public:
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 class Foo:
@@ -71,7 +71,7 @@ class FooIterator:
 
 ---
 
-## Rust
+## Rust 🦀
 
 ```rust
 trait Iterator {
@@ -132,7 +132,7 @@ auto rng = ranges::views::all(lst); // C++20
 
 ---
 
-## Python
+## Python 🐍
 
 - Only range-based for loop
 
@@ -154,7 +154,7 @@ p = next(iter2) # raise StopIteration
 
 ---
 
-## Rust
+## Rust 🦀
 
 - Only range-based for loop
 - No function overloading
@@ -166,7 +166,7 @@ p = next(iter2) # raise StopIteration
 
 ---
 
-## Rust
+## Rust 🦀
 
 ```rust
 let mut lst = [2, 3, 5, 7];
@@ -215,7 +215,7 @@ for (auto&& item : lst | ranges::views::stride(2)) { // ???
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 # Non-iterator
@@ -226,7 +226,7 @@ for i in range(0, len(lst), 2):
 
 ---
 
-## Rust
+## Rust 🦀
 
 ```rust
 let mut lst = [2, 3, 5, 7];
@@ -265,7 +265,7 @@ for (auto&& item : lst | ranges::views::drop(1)) { // ???
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 lst = [2, 3, 5, 7]
@@ -275,7 +275,7 @@ for i in range(1, len(lst)):
 
 ---
 
-## Rust
+## Rust 🦀
 
 ```rust
 let mut lst = [2, 3, 5, 7];
@@ -327,7 +327,7 @@ for (auto&& item : lst |
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 from itertools import filter
@@ -339,7 +339,7 @@ for item in filter(lambda x: x != k, lst):
 
 ---
 
-## Rust
+## Rust 🦀
 
 ```rust
 let mut lst = [2, 3, 5, 7];

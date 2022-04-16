@@ -1,52 +1,66 @@
-title: Why and why not learning Rust
+layout: true
+class: typo, typo-selection
 
-# Python wins
+---
 
-- Mathematicians, scientists (Matlab -> Python)
-    - Big data analysis, machine learning (Python + C)
-- Beginner (Java -> Python)
-- Application Engineer (tcl/tk -> Perl -> Python)
-- Prototyping (Python -> C++)
+count: false
+class: nord-dark, center, middle
 
-Good:
+# Why and why not learning Rust 🦀
+
+---
+
+## Python 🐍 wins
+
+- Mathematicians, scientists (Matlab -> Python 🐍)
+    - Big data analysis, machine learning (Python 🐍 + C)
+- Beginner (Java -> Python 🐍)
+- Application Engineer (tcl/tk -> Perl -> Python 🐍)
+- Prototyping (Python 🐍 -> C++)
+
+Good 👍:
 - Easy to use
 - Rice human resource
 
-Bad:
+Bad 👎:
 - Slow? 
 
 ---
 
-# Rust wins
+## Rust 🦀 wins
 
 - Replace C-like (Resource limited) Applications
 
-- IoT, Embedded System (C -> Rust/C++)
+- IoT, Embedded System (C -> Rust 🦀/C++)
     - performance, safety
     - Real-Time Interrupt-driven Concurrency (RTIC)
 - Operating System (TOCK, Linux kernel)
 - Web development
     - memory safety
 
-Good
+---
+
+## Rust 🦀 wins (cont'd)
+
+Good 👍:
 - Cargo package management
 - Borrow checker
   
-Bad
+Bad 👎:
 - Steep learning curve
 - Syntactic sugar
 
 ---
 
-# C++ wins
+## C++ wins
 
 - Core engines of game/computer graphics development
-- Core engines of EDA development (C -> C++ -> Rust???)
+- Core engines of EDA development (C -> C++ -> Rust 🦀???)
     - Algorithm development
 
-Good:
+Good 👍:
 - Object Oriented Programming (Inheritance)
 - Generic programming
 
-Bad:
+Bad 👎:
 - Too much burden

@@ -15,7 +15,7 @@ Numpy vs. Xtensor
 
 .font-sm[
 
-| Python 3 - numpy            | C++ 14 - xtensor                     |
+| Python 🐍 3 - numpy            | C++ 14 - xtensor                     |
 | --------------------------- | ------------------------------------ |
 | `np.linspace(1.0, 8.0, 50)` | `xt::linspace<double>(1.0, 8.0, 50)` |
 | `np.logspace(2.0, 3.0, 4)`  | `xt::logspace<double>(2.0, 3.0, 4)`  |
@@ -33,7 +33,7 @@ Numpy vs. Xtensor
 
 ---
 
-## Python:
+## Python 🐍:
 
 ```python
 import numpy as np
@@ -71,7 +71,7 @@ for (auto k = 0U; k != N; ++k) {
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 Pg = self.P.dot(g)

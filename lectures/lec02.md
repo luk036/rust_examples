@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Define function in Python
+## Define function in Python 🐍
 
 ```python
 # file: low_discr_seq.py
@@ -55,7 +55,7 @@ int main() {
 
 ---
 
-## Rust equivalence
+## Rust 🦀 equivalence
 
 ```rust
 fn vdc(mut k: u32, base: u32) -> f64 {
@@ -79,7 +79,7 @@ fn main() {
 
 ---
 
-## Type checking in Python with MyPy
+## Type checking in Python 🐍 with MyPy
 
 ```python
 # Check with mypy:
@@ -100,7 +100,7 @@ fn main() {
 
 ---
 
-## vdcorput (Python)
+## vdcorput (Python 🐍)
 
 ```python
 class vdcorput:
@@ -146,7 +146,7 @@ int main() {
 
 ---
 
-## circle (Python)
+## circle (Python 🐍)
 
 ```python
 from math import pi, sin, cos, sqrt
@@ -187,7 +187,7 @@ class circle {
 
 ---
 
-## halton (Python)
+## halton (Python 🐍)
 
 ```python
 from typing import List
@@ -232,7 +232,7 @@ class halton {
 
 ---
 
-## sphere (Python)
+## sphere (Python 🐍)
 
 ```python
 class sphere:
@@ -276,7 +276,7 @@ class sphere {
 
 ---
 
-## Find roots (Python)
+## Find roots (Python 🐍)
 
 ```python
 from math import sqrt
@@ -319,7 +319,7 @@ auto find_roots(const T& a, T b, T c) -> optional<pair<T, T>> {
 
 ## Conclusion
 
-- Python changes the way I write C++.
+- Python 🐍 changes the way I write C++.
 - Type-checking is your friend.
 - Const is useful. But don't over-constraint the callers.
 - Prefer composition rather than inheritance.
@@ -328,7 +328,7 @@ auto find_roots(const T& a, T b, T c) -> optional<pair<T, T>> {
 
 ## Source code
 
-Python:
+Python 🐍:
 
 $ wget https://github.com/luk036/pylds/blob/master/src/pylds/low_discr_seq.py
 

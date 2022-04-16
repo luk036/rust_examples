@@ -46,7 +46,7 @@ auto topmost = *std::max_element(first, last, up);
 
 ---
 
-## min()/max() in Rust 
+## min()/max() in Rust 🦀 
 
 ```cpp
 let coords = vec![
@@ -99,7 +99,7 @@ let (mut lst1, mut lst2): (Vec<Point<T>>, Vec<Point<T>>) =
 
 ---
 
-## Sorting in Python
+## Sorting in Python 🐍
 
 ```python
 lst1 = sorted(lst1, key=lambda a: (a.y, a.x))
@@ -133,7 +133,7 @@ lst2.reverse();
 
 ---
 
-## Python
+## Python 🐍
 
 ```python
 def create_ymono_polygon(lst):
@@ -169,7 +169,7 @@ inline void create_ymono_polygon(FwIter&& first, FwIter&& last) {
 
 ---
 
-# Rust
+# Rust 🦀
 
 ```rust
 impl<T: Clone + Num + Ord + Copy> Polygon<T> {

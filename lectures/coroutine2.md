@@ -1,7 +1,7 @@
 
 ---
 
-## Python code
+## Python 🐍 code
 
 ```python
 def BRGC_gen(n: int):
@@ -17,7 +17,7 @@ def BRGC_gen(n: int):
 
 ---
 
-## Rust code
+## Rust 🦀 code
 
 ```rust
 use genawaiter::sync::{Gen, GenBoxed};

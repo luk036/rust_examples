@@ -1,5 +1,5 @@
 class: animation-fade
-title: From Python To Modern C++ 
+title: From Python 🐍 To Modern C++ 
 layout: true
 
 <!-- This slide will serve as the base layout for all your slides -->
@@ -39,8 +39,8 @@ Agenda
 -   Yield and coroutine
 -   Spaceship operator
 -   Modules
--   Python-like enumerate()
--   Python-like formating: {fmt}
+-   Python 🐍-like enumerate()
+-   Python 🐍-like formating: {fmt}
 -   Library: numpy vs. xtensor
 -   Library: pytest vs. Catch2
 
@@ -51,12 +51,12 @@ Agenda
 Introduction
 ------------
 
--   Python is an easy-to-use programming language.
--   Python could be 10X slower than C++.
+-   Python 🐍 is an easy-to-use programming language.
+-   Python 🐍 could be 10X slower than C++.
 -   C++ is a strong type-checking language.
--   Modern C++ has become more Pythonic today.
+-   Modern C++ has become more Python 🐍ic today.
 -   Modern C++ is even faster than C.
--   Strategy: Python first, C++ follow.
+-   Strategy: Python 🐍 first, C++ follow.
 
 ---
 
@@ -66,7 +66,7 @@ Conda Installation
 -   Assume install to a USB stick, in which the file system is mounted
     to `$USB`, and is read/write accessable.
 
--   Use Conda to install Python and Python-related C++'s libraries:
+-   Use Conda to install Python 🐍 and Python 🐍-related C++'s libraries:
 
 .small[
 
@@ -96,7 +96,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 ---
 
-Conda-Python Installation
+Conda-Python 🐍 Installation
 -------------------------
 
 ```bash
@@ -120,7 +120,7 @@ source activate py26
 
 ---
 
-Python-related C++ Libraries Installation
+Python 🐍-related C++ Libraries Installation
 -----------------------------------------
 
 ```bash
@@ -188,7 +188,7 @@ target_link_libraries (${APP_NAME}
 Data Access Type
 ----------------
 
-A Python's variable have only one data access type, whereas C++ can have
+A Python 🐍's variable have only one data access type, whereas C++ can have
 reference (&), move reference (&&) and pointer (\*) type:
 
 .small[ .col-6[
@@ -227,7 +227,7 @@ In C++, the element type of container (array, vector, etc.)
 cannot be a reference (e.g. `vector<int&>`).
 Use smart pointers if necessary.
 
-Python:
+Python 🐍:
 
 ```python
 gainbucket = [bpqueue(pmax) for _ in range(K)]
@@ -245,7 +245,7 @@ auto gainbucket = std::vector<std::unique_ptr<bpqueue>>(
 Data Trasfer
 ------------
 
-Except basic data types (int, float, etc.), a Python's variable copies
+Except basic data types (int, float, etc.), a Python 🐍's variable copies
 only its reference to another object. Use `std::move` to avoid object
 copying.
 
@@ -282,7 +282,7 @@ auto create_something_big() {
 Auto
 ----
 
-Python has always been a dynamically typed language. You don't need to
+Python 🐍 has always been a dynamically typed language. You don't need to
 declare variable types anywhere. Whereas, C++11 uses `auto` keyword for
 automatic type deduction. (Almost Always Auto? 🤔)
 
@@ -319,15 +319,15 @@ auto tri(const std::tuple<P,P,P> &T) {
 
 ---
 
-Static Type Checking in Python
+Static Type Checking in Python 🐍
 -------------------------------
 
-In Python 3.7, you can add type information to the variables
+In Python 🐍 3.7, you can add type information to the variables
 and use `mypy` tool to perform static type checking.
 
 .small[ .col-6[
 
-In Python:
+In Python 🐍:
 
 ```python
 def set_key(self, it,
@@ -368,7 +368,7 @@ Class Template Argument Deduction (CTAD)
 
 .small[ .col-6[
 
-In Python:
+In Python 🐍:
 
 ```python
 class interval:
@@ -413,7 +413,7 @@ int main() {
 Type
 ----
 
-In Python, a type can also be a value of a variable:
+In Python 🐍, a type can also be a value of a variable:
 
 .small[
 
@@ -446,7 +446,7 @@ std::cout << factory[5];
 `std::any`
 ----------
 
-In Python, a variable can store a value of any types:
+In Python 🐍, a variable can store a value of any types:
 
 .small[
 
@@ -480,7 +480,7 @@ assert(std::any_cast<double>(M[8]) == 5.6);
 
 .small[ .col-4[
 
-In Python, a variable can be a null object:
+In Python 🐍, a variable can be a null object:
 
 ```python
 def my_oracle(x):
@@ -529,7 +529,7 @@ auto operator()(Arr& x, double t) -> std::tuple<Cut, double> {
 Range-Based For Loops
 ---------------------
 
-In Python, a `for` loop always iterates over a Python object. Meanwhile,
+In Python 🐍, a `for` loop always iterates over a Python 🐍 object. Meanwhile,
 C++ starts to support range-based for loops in C++11.
 
 .small[ .col-6[
@@ -562,12 +562,12 @@ bool coI(L &l, Sequence &seq) {
 
 ---
 
-Difference Between Python and C++
+Difference Between Python 🐍 and C++
 ----------------------------------
 
 .col-6[
 
-In Python:
+In Python 🐍:
 
 ```python
 for i in range(100):
@@ -599,7 +599,7 @@ Dynamic type vs. static type
 
 .col-6[
 
-In Python:
+In Python 🐍:
 
 ```python
 lower = 1
@@ -634,7 +634,7 @@ Uniform Initialization
 
 .col-6[
 
-In Python, you can create a dictionary with a single expression:
+In Python 🐍, you can create a dictionary with a single expression:
 
 ```python
 myDict = {5: "foo", 6: "bar"}
@@ -661,12 +661,12 @@ std::cout << myDict[5];
 Tuple
 -----
 
-Python has had tuples pretty much since the beginning. C++ added tuples
+Python 🐍 has had tuples pretty much since the beginning. C++ added tuples
 to the standard library in C++11.
 
 .col-4[
 
-Python:
+Python 🐍:
 
 ```python
 triple = (5, 6, 7)
@@ -781,7 +781,7 @@ auto ratio_ratio(K &a, K &b, K &c, K &d) {
 Function Object
 ---------------
 
-In Python, a function is also an object. Thus, you can pass in a function
+In Python 🐍, a function is also an object. Thus, you can pass in a function
 as an argument, or define a local function. In Modern C++, you can use a
 lambda function to simulate it.
 
@@ -829,7 +829,7 @@ Abstract Method
 
 .col-6[
 
-Python:
+Python 🐍:
 
 ```python
 from abc import abstractmethod
@@ -884,7 +884,7 @@ Abstract Method (II)
 
 .col-6[
 
-Python:
+Python 🐍:
 
 ```python
 from abc import abstractmethod
@@ -939,7 +939,7 @@ Yield and Coroutine
 
 .small[ .col-4[
 
-Python:
+Python 🐍:
 
 ```python
 def items(self):
@@ -984,7 +984,7 @@ Yield and Coroutine
 
 .small[ .col-4[
 
-Python:
+Python 🐍:
 
 ```python
 def myrange(first, last):
@@ -1050,10 +1050,10 @@ int main() {
 
 ---
 
-Python-like enumerate()
+Python 🐍-like enumerate()
 -----------------------
 
-In Python:
+In Python 🐍:
 
 .small[
 
@@ -1081,10 +1081,10 @@ for (auto [i, thing] : enumerate(things))
 
 ---
 
-Python-like formating: {fmt}
+Python 🐍-like formating: {fmt}
 ----------------------------
 
-Python:
+Python 🐍:
 
 .small[
 
@@ -1117,7 +1117,7 @@ Numpy vs. Xtensor
 
 .small[
 
-| Python 3 - numpy            | C++ 14 - xtensor                     |
+| Python 🐍 3 - numpy            | C++ 14 - xtensor                     |
 | --------------------------- | ------------------------------------ |
 | `np.linspace(1.0, 8.0, 50)` | `xt::linspace<double>(1.0, 8.0, 50)` |
 | `np.logspace(2.0, 3.0, 4)`  | `xt::logspace<double>(2.0, 3.0, 4)`  |
@@ -1142,7 +1142,7 @@ Numpy vs. Xtensor (II)
 
 .col-4[
 
-Python:
+Python 🐍:
 
 ```python
 import numpy as np
@@ -1191,7 +1191,7 @@ Numpy vs. Xtensor (III)
 
 .col-6[
 
-Python:
+Python 🐍:
 
 ```python
 # ...
@@ -1242,7 +1242,7 @@ pytest vs. Catch2
 
 .col-5[
 
-Python:
+Python 🐍:
 
 ```python
 from pytest import approx
@@ -1339,7 +1339,7 @@ class cholutil:
 
 ---
 
-How to write portable Python
+How to write portable Python 🐍
 ----------------------------
 
 ```python
@@ -1376,9 +1376,9 @@ which should be converted into s = R"(...)"; in C++."""
 📚 Further Reading
 ------------------
 
--   [Clean Python (2019)](https://link.springer.com/book/10.1007/978-1-4842-4878-2)
+-   [Clean Python 🐍 (2019)](https://link.springer.com/book/10.1007/978-1-4842-4878-2)
 
--   [Pro Python Best Practices (2017)](https://rd.springer.com/book/10.1007/978-1-4842-2241-6)
+-   [Pro Python 🐍 Best Practices (2017)](https://rd.springer.com/book/10.1007/978-1-4842-2241-6)
 
 -   [C++17 Quick Syntax Reference (2018)](https://rd.springer.com/book/10.1007/978-1-4842-3600-0)
 

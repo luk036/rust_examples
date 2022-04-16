@@ -12,7 +12,7 @@ $ pip install -e .
 
 ---
 
-# Rust
+# Rust 🦀
 
 ```toml
 
