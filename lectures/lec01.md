@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Hello Python 🐍
+## Hello Python 3 🐍
 
 ```python
 # file: hello.py
@@ -21,16 +21,18 @@ from math import sin
 
 a = 12 + 4
 print('结果是 {}.'.format(a))
+print(f'结果是 {a}.') # f'string
 
 b = sin(0.4)
 print('结果是 {}.'.format(b))
+print(f'结果是 {b}.') # f'string
 ```
 
 How about in C?
 
 ---
 
-## Hello printf
+## Hello `printf`
 
 ```c
 // file: hello.c
@@ -51,7 +53,7 @@ int main() {
 
 ---
 
-## Hello iostream
+## Hello `iostream`
 
 ```cpp
 // file: hello1.cpp
@@ -70,7 +72,7 @@ int main() {
 
 ---
 
-## iostream, good or bad?
+## `iostream`, good or bad?
 
 Good 👍:
 
@@ -79,13 +81,13 @@ Good 👍:
 Bad 👎:
 
 - The header file is too big.
-- The run time is usually slower than _printf()_.
+- The run time is usually slower than `printf()`.
 - The syntax is not readable.
 
 ---
 
 
-## Hello to {fmt} 
+## Hello to `{fmt}` 
 
 ```cpp
 // file: hello.cpp
@@ -118,9 +120,10 @@ How about in Rust 🦀?
 fn main() {
     let a = 12 + 4; 
     println!("答案是 {}.", a);
+    println!("答案是 {a}."); // short form
 
     let b = (0.4 as f64).sin();
-    println!("答案是 {}.", b);
+    println!("答案是 {b}."); // short form
 }
 ```
 
@@ -226,7 +229,7 @@ int main() {
   - python3 built-in
   - sudo apt install g++
   - sudo apt install libfmt-dev
-- Android termux:
+- Android Termux:
   - pkg install python
   - pkg install clang
   - pkg install fmt
@@ -236,7 +239,7 @@ int main() {
 
 ## Conclusion
 
-- Modern C++ is more python-like
+- Modern C++ is more python 🐍-like
 - Modern C++ is more Rust 🦀-like
 
 ---
