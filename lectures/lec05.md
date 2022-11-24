@@ -197,4 +197,4 @@ impl<T: Clone + Num + Ord + Copy> Polygon<T> {
 
 class: nord-dark, center, middle
 
-# Q & A 🗣️
+# Q & A 🙋️

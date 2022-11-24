@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Define function in Python 🐍
+## Define function in Python
 
 ```python
 # file: low_discr_seq.py
@@ -83,7 +83,7 @@ fn main() {
 
 ---
 
-## Type checking in Python 🐍 with `MyPy`
+## Type checking in Python with `MyPy`
 
 ```python
 # Check with mypy:
@@ -353,4 +353,4 @@ $ wget https://github.com/luk036/low_discr_seq/blob/master/lib/include/lds/low_d
 
 class: nord-dark, center, middle
 
-# Q & A 🗣️
+# Q & A 🙋️

@@ -10,7 +10,7 @@ class: nord-dark, center, middle
 
 ---
 
-## Cargo (Rust 🦀)
+## Cargo (Rust)
 
 ```bash
 $ cargo new/init
@@ -117,4 +117,4 @@ $ trunk check
 
 class: nord-dark, center, middle
 
-# Q & A 🗣️
+# Q & A 🙋️

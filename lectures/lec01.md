@@ -123,6 +123,7 @@ fn main() {
     println!("答案是 {a}."); // short form
 
     let b = (0.4 as f64).sin();
+    println!("答案是 {}.", b);
     println!("答案是 {b}."); // short form
 }
 ```
@@ -239,8 +240,8 @@ int main() {
 
 ## Conclusion
 
-- Modern C++ is more python 🐍-like
-- Modern C++ is more Rust 🦀-like
+- Modern C++ is more python-like
+- Modern C++ is more Rust-like
 
 ---
 
@@ -262,4 +263,4 @@ int main() {
 
 class: nord-dark, center, middle
 
-# Q & A 🗣️
+# Q & A 🙋️

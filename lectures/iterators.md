@@ -352,4 +352,4 @@ for item in lst.iter().filter(|x| x != k) {
 
 class: nord-dark, center, middle
 
-# Q & A 🗣️
+# Q & A 🙋️

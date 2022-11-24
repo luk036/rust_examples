@@ -41,7 +41,6 @@ Bad 👎:
 ---
 
 ## Rust 🦀 wins (cont'd)
-
 Good 👍:
 - Cargo package management
 - Borrow checker
@@ -52,7 +51,7 @@ Bad 👎:
 
 ---
 
-## C++ wins
+# C++ wins
 
 - Core engines of game/computer graphics development
 - Core engines of EDA development (C → C++ → Rust 🦀???)
